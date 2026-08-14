@@ -20,15 +20,19 @@
      procure por  wa.me  no arquivo (aparece 2 vezes).
 
   2. PRECO
-     Aparece escrito em 4 lugares. Procure por  R$250  no arquivo:
-     o numero grande da secao 05, a conta dos cortes logo abaixo dele,
-     a linha de resumo no fim da pagina e a ficha da proposta no rodape.
-     A conta dos cortes usa o valor do corte, hoje R$35. Procure por  R$35
-     (aparece 2 vezes: na legenda do exemplo e na conta).
-     Se mudar o preco ou o valor do corte, refaca a conta, que hoje diz:
-     250 dividido por 35 da pouco mais de sete cortes, entao oito clientes
-     pagam o mes. Hoje o numero de clientes bate com o numero de posts, e a
-     frase usa isso; se mexer num dos dois, reescreva a frase.
+     Aparece escrito em 4 lugares. Procure por  R$200  no arquivo:
+     o numero grande da secao 05, o titulo do bloco "Por que R$200" logo
+     abaixo dele, a linha de resumo no fim da pagina e a ficha do rodape.
+
+     ATENCAO: o bloco "Por que R$200" tem tres numeros calculados em cima do
+     preco e do valor do corte. Se mudar qualquer um dos dois, refaca os tres:
+       R$25   = 200 dividido por 8 posts. Precisa continuar menor que o corte.
+       6      = quantos cortes de R$35 cobrem os 200 (6 x 35 = 210; 5 dariam
+                so 175, entao seis e o primeiro numero que fecha a conta).
+       40min  = a sessao de fotos, que tambem aparece na secao 06 e na lista
+                do "todo mes".
+     O valor do corte, hoje R$35, aparece 2 vezes: na legenda do exemplo e
+     na primeira razao do bloco.
 
   3. QUANTOS POSTS
      Sao oito por mes, dois por semana, e cada um e um post sozinho, nao
@@ -295,6 +299,19 @@ h3{font-size:1.24rem;line-height:1.06}
 .oque li{display:grid;grid-template-columns:16px 1fr;gap:11px;
   color:var(--tx2);font-size:1rem;line-height:1.5}
 .oque li b{color:var(--verde-claro);font-weight:400}
+.porque{margin-top:26px;padding-top:24px;border-top:1px solid var(--filete)}
+.razoes{display:grid}
+/* no celular o numero fica em cima do texto: lado a lado sobrava so uns
+   25 caracteres por linha, o que deixava o paragrafo alto e picotado */
+.razoes li{display:grid;grid-template-columns:1fr;gap:5px;
+  padding:16px 0;border-top:1px solid var(--filete);
+  color:var(--tx2);font-size:1rem;line-height:1.5}
+.razoes li:last-child{border-bottom:1px solid var(--filete)}
+.razoes b{font-family:'Anton',Impact,sans-serif;font-weight:400;font-size:1.75rem;
+  color:var(--latao);line-height:1;white-space:nowrap}
+@media (min-width:560px){
+  .razoes li{grid-template-columns:120px 1fr;gap:22px;align-items:baseline}
+}
 .conta{margin-top:26px;padding:18px;background:rgba(47,93,63,.22);
   border:1px solid rgba(99,161,119,.28);border-radius:3px;color:var(--creme);font-size:1rem}
 .aparte{margin-top:18px;color:var(--tx2);font-size:1rem;line-height:1.55;
@@ -589,7 +606,7 @@ h3{font-size:1.24rem;line-height:1.06}
 
     <div class="preco rv" style="margin-top:26px">
       <div class="valor">
-        <strong>R$250</strong>
+        <strong>R$200</strong>
         <span>por mês</span>
       </div>
       <p class="sub">Oito posts por mês. Sem plano, sem taxa de entrada, sem pacote maior esperando
@@ -620,8 +637,30 @@ h3{font-size:1.24rem;line-height:1.06}
         </div>
       </div>
 
-      <p class="conta">Um corte seu custa R$35. São oito posts no mês, e bastam oito clientes novos
-        para o serviço se pagar, um por post. Do nono em diante é lucro.</p>
+      <div class="porque">
+        <h3 class="mono" style="color:var(--latao);margin-bottom:6px">Por que R$200</h3>
+        <ul class="razoes">
+          <li>
+            <b>R$25</b>
+            <span>é o que sai cada post, porque são oito no mês. Um corte seu custa R$35, então
+              cada post custa menos que um corte.</span>
+          </li>
+          <li>
+            <b>6</b>
+            <span>clientes novos no mês pagam o serviço inteiro. Seis cortes dão R$210. Do sétimo
+              em diante o que entrar é seu.</span>
+          </li>
+          <li>
+            <b>40min</b>
+            <span>é tudo que isso toma do seu tempo no mês, que é a sessão de fotos. Escolher a
+              foto, escrever, montar e organizar a ordem é comigo.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="conta">E se um mês não trouxer ninguém, você não ficou sem nada: os oito posts
+        continuam lá no perfil, trabalhando para quem chegar depois. Post não some quando o mês
+        acaba.</p>
 
       <p class="aparte"><b style="color:var(--verde-claro);font-weight:600">Sobre o Google Meu Negócio.</b>
         É o cadastro que faz a barbearia aparecer no mapa quando alguém procura barbearia por perto,
@@ -708,7 +747,7 @@ h3{font-size:1.24rem;line-height:1.06}
       <a class="btn btn-g" href="https://wa.me/5561998055163?text=Oi!%20Vi%20a%20pagina%20da%20proposta%20e%20queria%20saber%20mais." data-wa>
         <span class="seta">&rarr;</span> Falar no WhatsApp
       </a>
-      <p class="mono resumo">R$250 por mês &middot; Oito posts &middot; Uma sessão de fotos
+      <p class="mono resumo">R$200 por mês &middot; Oito posts &middot; Uma sessão de fotos
         &middot; Perfil montado &middot; Google Meu Negócio</p>
     </div>
   </div>
@@ -729,7 +768,7 @@ h3{font-size:1.24rem;line-height:1.06}
       </div>
       <div>
         <dt>Valor</dt>
-        <dd>R$250 por mês, oito posts, sem taxa de entrada</dd>
+        <dd>R$200 por mês, oito posts, sem taxa de entrada</dd>
       </div>
       <div>
         <dt>Data</dt>
