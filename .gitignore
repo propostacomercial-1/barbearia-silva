@@ -1,0 +1,5 @@
+# slides de origem: nao sao usados pelo site, ficam so na sua maquina
+slide_0*.png
+
+# configuracao local de preview
+.claude/
